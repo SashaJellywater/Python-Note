@@ -21,3 +21,15 @@ class Note:
     
     def to_string(note):
         return note.id + ';' + note.title + ';' + note.body + ';' + note.date
+    
+    def set_id(note):
+        note.id = str(uuid.uuid1())[0:3]
+
+    def set_title(note, title):
+        note.title = title
+
+    def set_body(note, body):
+        note.body = body
+
+    def set_date(note):
+        note.date = str(datetime.now())

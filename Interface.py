@@ -9,3 +9,17 @@ def UserMenu():
           "\n 5 - Показать заметку от определенной даты"
           "\n 6 - Выйти"
           "\n Введите номер действия:  ")
+    
+def create_new_note(num):
+    title = min_text_length(
+        input('Введите название заметки: '), num)
+    body = min_text_length(
+        input('Введите описание заметки: '), num)
+    return Note.Note(title=title, body=body)
+
+def min_text_length(text, n):
+    while len(text) <= n:
+        print(f'Текст должен быть больше {n} символов.\n')
+        text = input('Введите текст: ')
+    else:
+        return text
