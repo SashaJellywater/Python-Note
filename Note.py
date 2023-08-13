@@ -18,3 +18,6 @@ class Note:
 
     def get_date(note):
         return note.date
+    
+    def to_string(note):
+        return note.id + ';' + note.title + ';' + note.body + ';' + note.date
