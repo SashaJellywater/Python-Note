@@ -4,7 +4,7 @@ import Interface
 
 min_num = 2
 
-def add_note():
+def add():
     note = Interface.create_new_note(min_num)
     array = operation.read_file()
     for notes in array:

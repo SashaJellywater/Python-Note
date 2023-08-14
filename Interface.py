@@ -1,4 +1,5 @@
 import Note
+import os
 
 def user_menu():
     print("\n Приветствуем вас в приложении \'Заметки\'! Выберите действие:  "
@@ -15,7 +16,7 @@ def create_new_note(num):
         input('Введите название заметки: '), num)
     body = min_text_length(
         input('Введите описание заметки: '), num)
-    return Note.Note(title=title, body=body)
+    return Note.Note(title = title, body = body)
 
 def min_text_length(text, n):
     while len(text) <= n:

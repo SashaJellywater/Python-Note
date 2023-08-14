@@ -8,7 +8,7 @@ while user_choice != '6':
         user_choice = input().strip()
 
         if user_choice == '1':
-             f.add_note()
+             f.add()
         if user_choice == '2':
              f.show("all")
              f.id_show("edit")

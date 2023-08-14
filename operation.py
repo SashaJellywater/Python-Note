@@ -1,8 +1,8 @@
 import Note
 
 def write_file(array, mode):
-    notesFile = open("notes.csv", mode = "w", encoding='utf -8')
-    notesFile.seek()
+    notesFile = open("notes.csv", mode = 'w', encoding='utf -8')
+    notesFile.seek(0)
     notesFile.close()
     notesFile = open("notes.csv", mode=mode, encoding='utf - 8')
     for notes in array:
