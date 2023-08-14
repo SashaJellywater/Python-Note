@@ -2,7 +2,7 @@ import uuid
 from datetime import datetime
 
 class Note:
-    def __init__(self, id = str(uuid.uuid1())[0:3],  title = " " , body = " " , date = str(datetime.now())):
+    def __init__(self, id = str(uuid.uuid1())[0:3],  title = " " , body = " " , date = str(datetime.now().strftime("%d.%m.%Y %H:%M:%S"))):
         self.id = id
         self.title = title
         self.body = body
@@ -30,7 +30,7 @@ class Note:
         note.body = body
 
     def set_date(note):
-        note.date = str(datetime.now())
+        note.date = str(datetime.now().strftime("%d.%m.%Y %H:%M:%S"))
 
 
     def print_note(note):
